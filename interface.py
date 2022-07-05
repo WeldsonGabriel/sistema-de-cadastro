@@ -1,10 +1,12 @@
-#criar interface
+#criar interface 
 from PySimpleGUI import PySimpleGUI as sg
 #layout (tema SystemDefault1).
-sg.theme ('SystemDefault1')
+sg.theme ('SystemDefault')
 layout = [
-    [sg.text('usuario'), sg.Input(Key='usuario')],
-    [sg.text('senha'), sg.Input(key='senha', password_char='*')],
+    [sg.Text('usuario')],
+    [sg.Input(Key='usuario')],
+    [sg.Text('senha')],
+    [sg.Input(key='senha', password_char='*')],
     [sg.Checkbox('salvar o login ?')],
     [sg.Button('Entrar')]
 ]
@@ -17,4 +19,4 @@ while True:
         break
     if eventos == 'Entrar' : 
         if valores['usuario'] == 'Gabriel' and valores['senha'] == '123456':
-            print ('Bem Vindo!')
+            print('')
